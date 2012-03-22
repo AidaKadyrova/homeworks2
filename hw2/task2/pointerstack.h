@@ -4,7 +4,8 @@
 class PointerStack : public Stack
 {
 public:
-    PointerStack();
+    PointerStack():next(0){}
+    ~PointerStack();
     void push(int n);
     int pop();
     void printSize();

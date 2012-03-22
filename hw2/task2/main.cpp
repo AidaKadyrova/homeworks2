@@ -11,7 +11,7 @@ int main()
     //Stack * m = new ArrayStack();
     Stack * m = new PointerStack();
     int command = 0;
-    cout << "1 - push element to stack\n2- pop\n3 - print last element\n print stack\n5 - print size\n0 - exit" << endl;
+    cout << "1 - push element to stack\n2- pop\n3 - print last element\n4 - print stack\n5 - print size\n0 - exit" << endl;
     while(1)
     {
         cout << "enter the command" << endl;
@@ -53,6 +53,6 @@ int main()
         }
         }
     }
-
+    delete m;
     return 0;
 }

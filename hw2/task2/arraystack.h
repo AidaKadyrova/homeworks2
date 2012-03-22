@@ -4,7 +4,8 @@
 class ArrayStack : public Stack
 {
 public:
-    ArrayStack();
+    ArrayStack():size(0){}
+    ~ArrayStack(){}
     void push(int n);
     int pop();
     void printSize();

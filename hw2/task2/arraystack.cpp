@@ -4,11 +4,6 @@
 
 using namespace std;
 
-ArrayStack::ArrayStack()
-{
-    size  = 0;
-}
-
 void ArrayStack::push(int n)
 {
     value[++size] = n;

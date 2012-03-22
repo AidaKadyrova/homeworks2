@@ -4,9 +4,9 @@
 
 using namespace std;
 
-PointerStack::PointerStack()
+PointerStack::~PointerStack()
 {
-    next = NULL;
+    delete next;
 }
 
 void PointerStack::push(int n)

@@ -4,11 +4,6 @@
 
 using namespace std;
 
-Array::Array()
-{
-    size = 0;
-}
-
 void Array::addToBegin(int n)
 {
     for(int i = size; i > 0; i--)
@@ -59,21 +54,13 @@ void Array::deleteElement(int n)
     }
 }
 
-void Array::isElement(int n)
+bool Array::isElement(int n)
 {
-    bool isIn = false;
     for(int i = 0; i < size; i++)
         if (mas[i] == n)
         {
-            cout << "yes" << endl;
-            isIn = true;
-            break;
+            return true;
         }
-    if (isIn == false)
-        cout << "no" << endl;
+    return false;
 }
 
-void Array::deleteList()
-{
-    size = 0;
-}

@@ -4,12 +4,12 @@
 class Array : public List
 {
 public:
-    Array();
+    Array():size(0){}
+    ~Array(){}
     void addToBegin(int n);
     void addToEnd(int n);
     void addToThePosition(int n, int position);
-    void isElement(int n);
-    void deleteList();
+    bool isElement(int n);
     void deleteElement(int n);
     void printSize();
     void printList();

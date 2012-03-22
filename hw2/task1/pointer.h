@@ -4,13 +4,13 @@
 class Pointer : public List
 {
 public:
-    Pointer();
+    Pointer():next(0),size(0){}
+    ~Pointer();
     void addToBegin(int n);
     void addToEnd(int n);
     void addToThePosition(int n, int position);
-    void isElement(int n);
+    bool isElement(int n);
     void deleteElement(int n);
-    void deleteList();
     void printSize();
     void printList();
 private:

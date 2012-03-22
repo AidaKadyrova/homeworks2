@@ -20,6 +20,6 @@ SOURCES += main.cpp \
     array.cpp
 
 HEADERS += \
-    List.h \
     pointer.h \
-    array.h
+    array.h \
+    list.h

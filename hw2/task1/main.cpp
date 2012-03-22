@@ -50,7 +50,10 @@ int main()
         }
         case 5:
         {
-            m->isElement(read());
+            if (m->isElement(read()))
+                cout << "yes" << endl;
+            else
+                cout << "no" << endl;
             break;
         }
         case 6:
@@ -65,7 +68,7 @@ int main()
         }
         case 8:
         {
-            m->deleteList();
+            delete m;
             break;
         }
         case 0:

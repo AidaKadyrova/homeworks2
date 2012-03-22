@@ -4,10 +4,9 @@
 
 using namespace std;
 
-Pointer::Pointer()
+Pointer::~Pointer()
 {
-    next = NULL;
-    size = 0;
+    delete next;
 }
 
 void Pointer::addToBegin(int n)
@@ -69,25 +68,20 @@ void Pointer::addToThePosition(int n, int position)
         }
 }
 
-void Pointer::isElement(int n)
+bool Pointer::isElement(int n)
 {
     if (!next)
     {
-        cout << "no, because the list list is empty" << endl;
-        return;
+        return false;
     }
     Pointer *tmp = this;
     while (tmp->next)
     {
         if (tmp->value == n)
-        {
-            cout << "yes" << endl;
-            return;
-        }
+            return true;
         tmp = tmp->next;
     }
-    cout << "no" << endl;
-    \
+    return false;
 }
 
 
@@ -96,19 +90,11 @@ void Pointer::deleteElement(int n)
     Pointer *tmp = this;
     while (tmp->next && n != tmp->next->value)
         tmp = tmp->next;
-
     if (!tmp->next)
         return;
-
     Pointer *temp = tmp->next->next;
     delete tmp->next;
     tmp->next = temp;
-}
-
-void Pointer::deleteList()
-{
-    delete next;
-    next = NULL;
 }
 
 void Pointer::printSize()

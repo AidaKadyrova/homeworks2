@@ -2,12 +2,17 @@
 //#include "arraystack.h"111
 #include "stack.h"
 #include "pointerstack.h"
-
+#include "arrayStackTest.h"
+#include "pointerStackTest.h"
 using namespace std;
 
 
 int main()
 {
+    ArrayStackTest test1;
+    QTest::qExec(&test1);
+    PointerStackTest test2;
+    QTest::qExec(&test2);
     //Stack * m = new ArrayStack();
     Stack * m = new PointerStack();
     int command = 0;

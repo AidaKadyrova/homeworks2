@@ -11,7 +11,7 @@ public:
     void printSize();
     int front();
     void printStack();
-private:
+//private:
     PointerStack *next;
     int value;
 };

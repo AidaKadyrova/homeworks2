@@ -11,7 +11,7 @@ public:
     void printSize();
     int front();
     void printStack();
-private:
+//private:
     static const int dim = 1000;
     int value[dim];
     int size;

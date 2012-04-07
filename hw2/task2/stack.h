@@ -3,7 +3,7 @@
 class Stack
 {
 public:
-    virtual~Stack(){};
+    virtual~Stack(){}
     virtual int pop() = 0;
     virtual void push(int n) = 0;
     virtual void printSize() = 0;

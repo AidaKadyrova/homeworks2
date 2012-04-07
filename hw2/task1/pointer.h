@@ -13,7 +13,7 @@ public:
     void deleteElement(int n);
     void printSize();
     void printList();
-private:
+//private:
     int value;
     Pointer* next;
     int size;

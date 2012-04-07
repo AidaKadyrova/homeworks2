@@ -11,11 +11,12 @@ QT       -= gui
 TARGET = task1
 CONFIG   += console
 CONFIG   -= app_bundle
+CONFIG   += qtestlib
 
 TEMPLATE = app
 
 
-SOURCES += main.cpp \
+SOURCES += \
     heapsort.cpp \
     qsort.cpp \
     bubblesort.cpp
@@ -24,4 +25,5 @@ HEADERS += \
     sorter.h \
     heapsort.h \
     qsort.h \
-    bubblesort.h
+    bubblesort.h \
+    sortTest.h

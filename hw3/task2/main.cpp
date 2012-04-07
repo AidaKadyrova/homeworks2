@@ -9,6 +9,8 @@ using namespace std;
 
 int main()
 {
+
+
     int n = 0;
     cout << "enter odd number\n";
     cin >> n;

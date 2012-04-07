@@ -11,15 +11,19 @@ QT       -= gui
 TARGET = task2
 CONFIG   += console
 CONFIG   -= app_bundle
+CONFIG   += qtestlib
 
 TEMPLATE = app
 
 
-SOURCES += main.cpp \
+SOURCES += \
     arraystack.cpp \
-    pointerstack.cpp
+    pointerstack.cpp \
+    main.cpp
 
 HEADERS += \
     stack.h \
     arraystack.h \
-    pointerstack.h
+    pointerstack.h \
+    arrayStackTest.h \
+    pointerStackTest.h

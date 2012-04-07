@@ -6,7 +6,7 @@ using namespace std;
 
 void PrintToConsole::printSpirally(int **arr, int n)
 {
-    cout << "\n\spirally:\n\n";
+    //cout << "\n\spirally:\n\n";
     int r = 0;
     int count = 0;
     int center = n / 2;
@@ -40,9 +40,9 @@ void PrintToConsole::printSpirally(int **arr, int n)
         mas[count] = arr[center - r + 1][j];
         count++; //move right once again
     }
-    cout << endl;
-    for (int i = 0; i < n*n; i++)
-        cout << mas[i] << " ";
+    //cout << endl;
+    //for (int i = 0; i < n*n; i++)
+      //  cout << mas[i] << " ";
 }
 
 void PrintToConsole::printArray(int **arr, int n)

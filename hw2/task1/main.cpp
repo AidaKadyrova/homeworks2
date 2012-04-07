@@ -1,6 +1,8 @@
 #include <iostream>
-//#include "array.h"
+#include "array.h"
 #include "pointer.h"
+#include "arrayTest.h"
+#include "pointerTest.h"
 
 using namespace std;
 
@@ -14,8 +16,12 @@ int read()
 
 int main()
 {
-    //List * m = new Array();
-    List * m = new Pointer();
+    ArrayTest test;
+    QTest::qExec(&test);
+    ArrayTest test1;
+    QTest::qExec(&test1);
+    List * m = new Array();
+    //List * m = new Pointer();
 
     int command = 0;
     cout << "1 - add an element to the begin\n2 - add an element to the end\n3 - add an element to some position\n4 - delete element\n5 - is element in list\n6 - print list\n7 - print a number of elements\n8 - delete List\n0 - exit" << endl;

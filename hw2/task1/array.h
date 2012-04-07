@@ -13,7 +13,7 @@ public:
     void deleteElement(int n);
     void printSize();
     void printList();
-private:
+//private:
     static const int dim = 1000;
     int mas[dim];
     int size;

@@ -16,9 +16,7 @@ void QSort::sorting(int array[], int start, int end)
             swap(array[i++], array[j--]);
     }
     while (i <= j);
-    if (start < j - x - 1)
         sorting(array, start, j);
-    if (i < end - x - 1)
         sorting(array, i, end);
 }
 

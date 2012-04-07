@@ -11,18 +11,21 @@ QT       -= gui
 TARGET = task2
 CONFIG   += console
 CONFIG   -= app_bundle
+CONFIG   += qtestlib
 
 TEMPLATE = app
 
 
-SOURCES += main.cpp \
+SOURCES += \
     printtoconsole.cpp \
     printtofile.cpp
 
 HEADERS += \
     output.h \
     printtoconsole.h \
-    printtofile.h
+    printtofile.h \
+    printToConsoleTest.h \
+    printToFileTest.h
 
 OTHER_FILES += \
     output.txt

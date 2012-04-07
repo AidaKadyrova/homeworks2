@@ -11,7 +11,7 @@ public:
     virtual void addToThePosition(int n, int position) = 0;
     virtual void printList() = 0;
     virtual void printSize() = 0;
-protected:
+//protected:
     int size;
 };
 

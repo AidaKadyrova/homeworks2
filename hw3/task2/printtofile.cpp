@@ -19,7 +19,7 @@ void PrintToFile::printArray(int **arr, int n)
 void PrintToFile::printSpirally(int **arr, int n)
 {
     ofstream f("output.txt", ios::app);
-    f << "\n\spirally:\n\n";
+    //f << "\n\spirally:\n\n";
     int r = 0;
     int center = n / 2;
     while (center > r)

@@ -9,9 +9,9 @@ void ArrayStack::push(int n)
     value[++size] = n;
 }
 
-void ArrayStack::printSize()
+int ArrayStack::sizeOfStack()
 {
-    cout << size << endl;
+    return size;
 }
 
 int ArrayStack::front()
@@ -31,4 +31,10 @@ void ArrayStack::printStack()
         cout << value[i] << " ";
     }
     cout << endl;
+}
+
+
+int ArrayStack::at(int i)
+{
+    return value[i];
 }

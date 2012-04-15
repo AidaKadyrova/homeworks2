@@ -27,18 +27,18 @@ private slots:
     {
         a->addToBegin(3);
         a->addToBegin(9);
-        QVERIFY(a->mas[0] == 9);
-        QVERIFY(a->mas[1] == 3);
-        QVERIFY(a->size == 2);
+        QVERIFY(a->at(0) == 9);
+        QVERIFY(a->at(1) == 3);
+        QVERIFY(a->sizeOfList() == 2);
     }
 
     void addToEndTest()
     {
         a->addToEnd(5);
         a->addToEnd(0);
-        QVERIFY(a->mas[0] == 5);
-        QVERIFY(a->mas[1] == 0);
-        QVERIFY(a->size == 2);
+        QVERIFY(a->at(0) == 5);
+        QVERIFY(a->at(1) == 0);
+        QVERIFY(a->sizeOfList() == 2);
     }
 
     void isElementTest()
@@ -50,10 +50,12 @@ private slots:
     {
         a->addToBegin(3);
         a->deleteElement(3);
-        QVERIFY(a->size == 0);
+        QVERIFY(a->sizeOfList() == 0);
     }
 
 private:
     Array *a;
 };
 
+
+QTEST_MAIN(ArrayTest)

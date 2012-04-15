@@ -8,10 +8,12 @@ public:
     ~PointerStack();
     void push(int n);
     int pop();
-    void printSize();
+    int sizeOfStack();
     int front();
     void printStack();
-//private:
+    int at(int i){}
+
+private:
     PointerStack *next;
     int value;
 };

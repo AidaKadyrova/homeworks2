@@ -48,7 +48,7 @@ int main()
         }
         case 5:
         {
-            m->printSize();
+            cout << m->sizeOfStack() << endl;
             break;
         }
         case 0:

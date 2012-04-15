@@ -25,7 +25,7 @@ private slots:
     {
         a->push(3);
         a->push(9);
-        QVERIFY(a->next->value == 9);
+        QVERIFY(a->front() == 9);
     }
 
     void frontTest()
@@ -37,7 +37,6 @@ private slots:
     {
         a->push(3);
         QVERIFY(a->front() == a->pop());
-        QVERIFY(a->next == NULL);
     }
 private:
     PointerStack *a;

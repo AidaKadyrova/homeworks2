@@ -2,7 +2,6 @@
 #include "array.h"
 #include "pointer.h"
 #include "arrayTest.h"
-#include "pointerTest.h"
 
 using namespace std;
 
@@ -16,10 +15,6 @@ int read()
 
 int main()
 {
-    ArrayTest test;
-    QTest::qExec(&test);
-    ArrayTest test1;
-    QTest::qExec(&test1);
     List * m = new Array();
     //List * m = new Pointer();
 

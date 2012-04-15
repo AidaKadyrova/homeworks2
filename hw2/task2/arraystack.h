@@ -8,10 +8,11 @@ public:
     ~ArrayStack(){}
     void push(int n);
     int pop();
-    void printSize();
+    int sizeOfStack();
     int front();
     void printStack();
-//private:
+    int at(int i);
+private:
     static const int dim = 1000;
     int value[dim];
     int size;

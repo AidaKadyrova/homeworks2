@@ -49,7 +49,7 @@ int PointerStack::front()
     return next->value;
 }
 
-void PointerStack::printSize()
+int PointerStack::sizeOfStack()
 {
     int count = 0;
     PointerStack *tmp = this;
@@ -58,5 +58,7 @@ void PointerStack::printSize()
         tmp = tmp->next;
         count++;
     }
-    cout << count << endl;
+    return count;
 }
+
+

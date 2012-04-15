@@ -27,9 +27,9 @@ void Array::printList()
     cout << endl;
 }
 
-void Array::printSize()
+int Array::sizeOfList()
 {
-    cout << "there are " << size << " elements" << endl;
+    return size;
 }
 
 void Array::addToThePosition(int n, int position)
@@ -64,3 +64,7 @@ bool Array::isElement(int n)
     return false;
 }
 
+int Array::at(int i)
+{
+    return mas[i];
+}

@@ -27,18 +27,18 @@ private slots:
     {
         p->addToBegin(3);
         p->addToBegin(9);
-        QVERIFY(p->value == 9);
-        QVERIFY(p->next->value == 3);
-        QVERIFY(p->size == 2);
+        QVERIFY(p->at(0) == 9);
+        QVERIFY(p->at(1) == 3);
+        QVERIFY(p->sizeOfList() == 2);
     }
 
     void addToEndTest()
     {
         p->addToEnd(5);
         p->addToEnd(0);
-        QVERIFY(p->value == 5);
-        QVERIFY(p->next->value == 0);
-        QVERIFY(p->size == 2);
+        QVERIFY(p->at(0) == 5);
+        QVERIFY(p->at(1) == 0);
+        QVERIFY(p->sizeOfList() == 2);
     }
 
     void isElementTest()
@@ -50,9 +50,12 @@ private slots:
     {
         p->addToBegin(3);
         p->deleteElement(3);
-        QVERIFY(p->size == 0);
+        QVERIFY(p->sizeOfList() == 0);
     }
 
 private:
     Pointer *p;
 };
+
+
+QTEST_MAIN(PointerTest)

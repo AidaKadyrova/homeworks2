@@ -25,21 +25,21 @@ private slots:
     {
         a->push(3);
         a->push(9);
-        QVERIFY(a->value[1] == 3);
-        QVERIFY(a->value[2] == 9);
-        QVERIFY(a->size == 2);
+        QVERIFY(a->at(1) == 3);
+        QVERIFY(a->at(2) == 9);
+        QVERIFY(a->sizeOfStack() == 2);
     }
 
     void frontTest()
     {
         a->push(2);
-        QVERIFY(a->front() == a->value[1]);
+        QVERIFY(a->front() == a->at(1));
     }
     void popTest()
     {
         a->push(3);
         QVERIFY(a->front() == a->pop());
-        QVERIFY(a->size == 0);
+        QVERIFY(a->sizeOfStack() == 0);
     }
 
 

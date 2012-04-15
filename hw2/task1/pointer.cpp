@@ -81,6 +81,8 @@ bool Pointer::isElement(int n)
             return true;
         tmp = tmp->next;
     }
+    if (tmp->value == n)
+        return true;
     return false;
 }
 
@@ -95,9 +97,19 @@ void Pointer::deleteElement(int n)
     Pointer *temp = tmp->next->next;
     delete tmp->next;
     tmp->next = temp;
+    size--;
 }
 
-void Pointer::printSize()
+int Pointer::sizeOfList()
 {
-    cout << "there are " << size << " elements in list" << endl;
+    return size;
+}
+
+int Pointer::at(int i)
+{
+    Pointer *tmp = this;
+    if (i < size)
+        for (int j = 0; j <= i; j++)
+            tmp = tmp->next;
+    return tmp->value;
 }

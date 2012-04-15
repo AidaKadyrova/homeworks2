@@ -17,13 +17,9 @@ TEMPLATE = app
 
 
 SOURCES += \
-    pointer.cpp \
-    array.cpp \
-    main.cpp
+    pointer.cpp
 
 HEADERS += \
-    pointer.h \
-    array.h \
     list.h \
-    arrayTest.h \
+    pointer.h \
     pointerTest.h

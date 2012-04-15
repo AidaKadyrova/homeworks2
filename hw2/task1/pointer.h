@@ -11,9 +11,10 @@ public:
     void addToThePosition(int n, int position);
     bool isElement(int n);
     void deleteElement(int n);
-    void printSize();
+    int sizeOfList();
     void printList();
-//private:
+    int at(int i);
+private:
     int value;
     Pointer* next;
     int size;

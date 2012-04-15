@@ -18,7 +18,8 @@ public:
     void printSpirally(int **arr, int n);
     /// just prints an array to console
     void printArray(int **arr, int n);
-//private:
+    int at(int i){ return mas[i];}
+private:
     /// method printToConsole writes an array here before printing
     int mas[100];
 };

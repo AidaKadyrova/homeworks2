@@ -35,7 +35,7 @@ private slots:
         a->printSpirally(pArr, dim);
         int tmp[dim*dim] = {4, 5, 8, 7, 6, 3, 0, 1, 2};
         for (int i = 0; i < dim*dim; i++)
-            QVERIFY(tmp[i] == a->mas[i]);
+            QVERIFY(tmp[i] == a->at(i));
 
         for (int i = 0; i < dim; i++)
             delete[]pArr[i];

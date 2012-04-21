@@ -14,9 +14,9 @@ public:
     Set():size(0){}
     ~Set(){}
 
-    void addElement(T el)
+    void addElement(const T &el)
     {
-        if (!isElement(el))
+        if (!contain(el))
         set[size++] = el;
     }
 
@@ -31,7 +31,7 @@ public:
             }
     }
 
-    bool isElement(T el)
+    bool contain(T el)
     {
         for(int i = 0; i < size; i++)
             if (set[i] == el)
@@ -39,7 +39,7 @@ public:
         return false;
     }
 
-    Set intersection(Set set1)
+    Set intersection(Set &set1)
     {
         Set resultSet;
         for (int i = 0; i < size; i++)
@@ -49,7 +49,7 @@ public:
         return resultSet;
     }
 
-    Set association(Set set1)
+    Set association(Set &set1)
     {
         Set resultSet;
         for (int i = 0; i < size; i++)

@@ -15,14 +15,14 @@ public:
     void remove(int n)
     {
         if (!isElement(n))
-            throw EmptyListException();
+            throw RemoveMissingItemExpression();
         else deleteElement(n);
     }
 
-    class EmptyListException
+    class RemoveMissingItemExpression
     {
     public:
-        EmptyListException(){}
+        RemoveMissingItemExpression(){}
     };
 
     class AlreadyExistItemException

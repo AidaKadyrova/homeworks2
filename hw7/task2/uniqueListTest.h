@@ -37,9 +37,9 @@ private slots:
         q->add(2);
         try {
             q->remove(2);
-        } catch (UniqueList::EmptyListException&)
+        } catch (UniqueList::RemoveMissingItemExpression&)
         {
-            qDebug("removing from empty list");
+            qDebug("removing missing item");
         }
     }
 
@@ -48,9 +48,9 @@ private slots:
         q->add(3);
         try {
             q->remove(2);
-        } catch (UniqueList::EmptyListException&)
+        } catch (UniqueList::RemoveMissingItemExpression&)
         {
-            qDebug("removing from empty queue");
+            qDebug("removing missing item");
         }
     }
 private:

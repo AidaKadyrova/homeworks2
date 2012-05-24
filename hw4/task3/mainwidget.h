@@ -13,7 +13,8 @@ private:
     double calculate();
     char currentOperation;
     bool changed;
-    int savedValue;
+    bool haveFirst;
+    double savedValue;
     QVBoxLayout *layout;
     QLineEdit *lineEdit;
 public slots:

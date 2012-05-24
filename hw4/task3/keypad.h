@@ -9,7 +9,7 @@ class Keypad : public QWidget
 public:
     Keypad(QWidget *parent = 0);
 private:
-    void addButton(QString caption, int val, int i, int j);
+    void addButton(QString caption, int val, int i, int j, int row = 1, int column = 1);
     QGridLayout *grid;
     QSignalMapper *signalMapper;
 };

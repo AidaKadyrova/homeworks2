@@ -11,22 +11,24 @@ Keypad::Keypad(QWidget *parent) : QWidget(parent)
     for (int i = 1; i < 10; ++i)
         addButton(QString::number(i), i, (i - 1) / 3, (i - 1) % 3);
 
-    addButton("0", 0, 3, 0);
-    addButton("C", 'C', 3, 1);
-    addButton("=", '=', 3, 2);
-    addButton("/", '/', 3, 3);
-    addButton("+", '+', 0, 3);
-    addButton("-", '-', 1, 3);
-    addButton("*", '*', 2, 3);
+    addButton("0", 0, 3, 1);
+    addButton(".", '.', 3, 0);
+    addButton(QChar(0x221A), 's', 3, 2);
+    addButton("C", 'C', 0, 3, 1, 2);
+    addButton("=", '=', 3, 3, 1, 2);
+    addButton("*", '*', 1, 4);
+    addButton("/", '/', 2, 4);
+    addButton("+", '+', 1, 3);
+    addButton("-", '-', 2, 3);
     grid->setSpacing(3);
     setLayout(grid);
 }
 
-void Keypad::addButton(QString caption, int val, int i, int j)
+void Keypad::addButton(QString caption, int val, int i, int j, int row, int column)
 {
-    QPushButton *digit = new QPushButton(caption, this);
-    digit->setFont(QFont("Helvetica", 18));
-    grid->addWidget(digit, i, j);
-    signalMapper->setMapping(digit, val);
-    connect(digit, SIGNAL(clicked()), signalMapper, SLOT(map()));
+    QPushButton *button = new QPushButton(caption, this);
+    button->setFont(QFont("Helvetica", 18));
+    grid->addWidget(button, i, j, row, column);
+    signalMapper->setMapping(button, val);
+    connect(button, SIGNAL(clicked()), signalMapper, SLOT(map()));
 }

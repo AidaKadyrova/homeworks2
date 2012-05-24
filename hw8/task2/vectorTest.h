@@ -2,7 +2,7 @@
 #include <QtTest/QtTest>
 #include <QObject>
 #include "vector.h"
-
+#include <iostream>
 class VectorTest : public QObject
 {
     Q_OBJECT
@@ -11,50 +11,57 @@ public:
 private slots:
     void init()
     {
-        v = new Vector();
+        vec = new Vector<3>();
     }
 
     void cleanup()
     {
-        delete v;
+        delete vec;
     }
 
     void scalarMultipplyTest()
     {
-        v->setX(4);
-        v->setY(7);
-        Vector *v1 = new Vector();
-        v1->setX(5);
-        v1->setY(2);
-        QVERIFY(v->scalarMultiply(v1) == 34);
+        vec->set(1, 1);
+        vec->set(2, 3);
+        vec->set(3, 2);
+
+        Vector<3> *vec1 = new Vector<3>();
+        vec1->set(1, 4);
+        vec1->set(2, 5);
+        vec1->set(3, 6);
+        QVERIFY(vec->scalarMultiply(vec1) == 31);
     }
 
     void getXYTest()
     {
-        v->setX(6);
-        v->setY(5);
-        QVERIFY(v->getX() == 6 && v->getY() == 5);
+        vec->set(1, 2);
+        vec->set(2, 4);
+        vec->set(3, 3);
+        QVERIFY(vec->at(1) == 2);
+        QVERIFY(vec->at(2) == 4);
+        QVERIFY(vec->at(3) == 3);
     }
 
     void addTest()
-    {
-        v->setX(4);
-        v->setY(7);
-        Vector *v1 = new Vector(*v);
-        QVERIFY(v->add(v1)->getX() == 8);
-        QVERIFY(v->add(v1)->getY() == 14);
+    {   vec->set(1, 2);
+        vec->set(2, 4);
+        vec->set(3, 3);
+        Vector<3> *vec1 = new Vector<3>(*vec);
+        QVERIFY(vec->add(vec1)->at(1) == 4);
+        QVERIFY(vec->add(vec1)->at(2) == 8);
     }
 
     void substructAndIsNullTest()
     {
-        v->setX(4);
-        v->setY(7);
-        Vector *v1 = new Vector(*v);
-        QVERIFY(v->substruct(v1)->isNull());
+        vec->set(1, 2);
+        vec->set(2, 4);
+        vec->set(3, 3);
+        Vector<3> *vec1 = new Vector<3>(*vec);
+        QVERIFY(vec->substruct(vec1)->isNull());
     }
 
 private:
-    Vector *v;
+    Vector<3> *vec;
 
 };
 

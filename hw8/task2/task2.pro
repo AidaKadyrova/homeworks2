@@ -16,8 +16,7 @@ CONFIG   += qtestlib
 TEMPLATE = app
 
 
-SOURCES += \
-    vector.cpp
+SOURCES +=
 
 HEADERS += \
     vector.h \
